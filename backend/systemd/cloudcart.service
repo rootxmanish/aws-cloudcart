@@ -1,0 +1,16 @@
+[Unit]
+Description=CloudCart FastAPI Application
+After=network.target
+
+[Service]
+Type=simple
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/opt/cloudcart/backend
+EnvironmentFile=/opt/cloudcart/backend/.env
+ExecStart=/opt/cloudcart/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

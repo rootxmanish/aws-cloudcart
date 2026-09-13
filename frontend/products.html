@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudCart | Products</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="/">Cloud<span>Cart</span></a>
+    <div class="nav-links">
+      <a href="/products.html">Products</a>
+      <a href="/cart.html" class="cart-link">
+        Cart
+        <span class="cart-badge" data-count="0">0</span>
+      </a>
+      <a href="/orders.html" data-auth="logged-in" style="display:none">Orders</a>
+      <a href="/login.html"    data-auth="logged-out">Login</a>
+      <a href="/register.html" data-auth="logged-out">Register</a>
+      <a href="#" data-auth="logged-in" data-action="logout" class="nav-logout" style="display:none">Logout</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="page-header">
+    <h1>Products</h1>
+    <form class="search-bar" id="search-form">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search products…"
+        autocomplete="off"
+      />
+      <button class="btn btn-primary btn-sm" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div id="products" class="grid">
+    <div class="loading-wrap" style="grid-column:1/-1">
+      <div class="spinner"></div>
+      <p>Loading products…</p>
+    </div>
+  </div>
+
+  <div id="pagination" class="pagination"></div>
+</main>
+
+<div id="toast-container"></div>
+<script src="/js/app.js"></script>
+</body>
+</html>
