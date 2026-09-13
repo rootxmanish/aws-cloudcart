@@ -1,5 +1,5 @@
 # CloudCart — Deployment Log
-# Deployed by: Manish
+# Deployed by: Manish Kumar
 # Date: September 13, 2026
 # Region: ap-south-1 (Mumbai)
 # Architecture: AWS 3-Tier (Web → App → RDS MySQL)
